@@ -1,0 +1,192 @@
+[
+  {
+    "id": "sd_001",
+    "domain": "system_design",
+    "topic": "scaling",
+    "subtopic": "caching",
+    "difficulty": "medium",
+    "question": "Design a caching strategy for a high-traffic news website. Walk me through your approach.",
+    "follow_ups": [
+      "How do you handle cache invalidation when articles are updated?",
+      "What's your strategy for cache warming?",
+      "How do you prevent cache stampede?"
+    ],
+    "rubric": {
+      "requirements": "Identifies read-heavy workload, time-sensitive content",
+      "components": "CDN, application cache, database query cache",
+      "tradeoffs": "TTL vs invalidation complexity",
+      "production": "Considers cache hit rates, monitoring"
+    }
+  },
+  {
+    "id": "sd_002",
+    "domain": "system_design",
+    "topic": "scaling",
+    "subtopic": "load_balancing",
+    "difficulty": "easy",
+    "question": "Explain different load balancing algorithms and when you would use each.",
+    "follow_ups": [
+      "How do you handle sticky sessions?",
+      "What happens when a server fails?",
+      "How do you handle slow servers?"
+    ],
+    "rubric": {
+      "requirements": "Understands traffic distribution needs",
+      "components": "Round robin, weighted, least connections, IP hash",
+      "tradeoffs": "Simplicity vs optimality",
+      "production": "Health checks, graceful degradation"
+    }
+  },
+  {
+    "id": "sd_003",
+    "domain": "system_design",
+    "topic": "data_storage",
+    "subtopic": "sql_nosql",
+    "difficulty": "medium",
+    "question": "You're building an e-commerce platform. How would you choose between SQL and NoSQL for different parts of the system?",
+    "follow_ups": [
+      "How do you handle transactions across services?",
+      "What about search functionality?",
+      "How do you handle product recommendations?"
+    ],
+    "rubric": {
+      "requirements": "Identifies different data access patterns",
+      "components": "SQL for orders, NoSQL for catalog/sessions",
+      "tradeoffs": "Consistency vs flexibility",
+      "production": "Migration strategy, data modeling"
+    }
+  },
+  {
+    "id": "sd_004",
+    "domain": "system_design",
+    "topic": "data_storage",
+    "subtopic": "sharding",
+    "difficulty": "hard",
+    "question": "Design a sharding strategy for a social media platform with billions of users. How would you shard user data?",
+    "follow_ups": [
+      "How do you handle users following users on different shards?",
+      "What's your strategy for celebrity users with millions of followers?",
+      "How do you rebalance shards as data grows?"
+    ],
+    "rubric": {
+      "requirements": "Identifies hot spots, cross-shard concerns",
+      "components": "User ID sharding, consistent hashing",
+      "tradeoffs": "Data locality vs hot partition",
+      "production": "Rebalancing, monitoring"
+    }
+  },
+  {
+    "id": "sd_005",
+    "domain": "system_design",
+    "topic": "consistency_availability",
+    "subtopic": "cap_theorem",
+    "difficulty": "medium",
+    "question": "You're designing a distributed database. Explain the CAP theorem and how it affects your design decisions.",
+    "follow_ups": [
+      "Give an example of a CP vs AP system",
+      "How do you handle network partitions?",
+      "What's the difference between strong and eventual consistency?"
+    ],
+    "rubric": {
+      "requirements": "Understands the theorem correctly",
+      "components": "C, A, P definitions with examples",
+      "tradeoffs": "Real systems and their choices",
+      "production": "Practical implications"
+    }
+  },
+  {
+    "id": "sd_006",
+    "domain": "system_design",
+    "topic": "reliability",
+    "subtopic": "fault_tolerance",
+    "difficulty": "medium",
+    "question": "Design a system that can handle the failure of any single component. Walk me through your approach.",
+    "follow_ups": [
+      "How do you detect failures?",
+      "What's your failover strategy?",
+      "How do you test failure scenarios?"
+    ],
+    "rubric": {
+      "requirements": "Identifies single points of failure",
+      "components": "Redundancy, replication, health checks",
+      "tradeoffs": "Cost vs reliability",
+      "production": "Chaos engineering, runbooks"
+    }
+  },
+  {
+    "id": "sd_007",
+    "domain": "system_design",
+    "topic": "communication",
+    "subtopic": "messaging",
+    "difficulty": "hard",
+    "question": "Design a notification system that sends millions of notifications per day across email, SMS, and push. Walk me through the architecture.",
+    "follow_ups": [
+      "How do you handle delivery guarantees?",
+      "How do you prevent duplicate notifications?",
+      "How do you handle rate limiting from providers?"
+    ],
+    "rubric": {
+      "requirements": "Identifies async processing, multiple channels",
+      "components": "Message queue, workers, provider integrations",
+      "tradeoffs": "At-least-once vs exactly-once",
+      "production": "Monitoring, retry strategies"
+    }
+  },
+  {
+    "id": "sd_008",
+    "domain": "system_design",
+    "topic": "communication",
+    "subtopic": "api_design",
+    "difficulty": "easy",
+    "question": "Design a RESTful API for a todo list application. What endpoints would you create?",
+    "follow_ups": [
+      "How do you handle pagination?",
+      "What about filtering and sorting?",
+      "How do you version your API?"
+    ],
+    "rubric": {
+      "requirements": "Identifies CRUD operations",
+      "components": "Proper HTTP methods, status codes",
+      "tradeoffs": "REST conventions vs convenience",
+      "production": "Documentation, error handling"
+    }
+  },
+  {
+    "id": "sd_009",
+    "domain": "system_design",
+    "topic": "security",
+    "subtopic": "authentication",
+    "difficulty": "medium",
+    "question": "Design an authentication system for a microservices architecture. How do services authenticate with each other?",
+    "follow_ups": [
+      "How do you handle token refresh?",
+      "What about service-to-service auth?",
+      "How do you revoke access?"
+    ],
+    "rubric": {
+      "requirements": "User auth vs service auth",
+      "components": "JWT, OAuth, service mesh",
+      "tradeoffs": "Stateless vs stateful tokens",
+      "production": "Key rotation, audit logging"
+    }
+  },
+  {
+    "id": "sd_010",
+    "domain": "system_design",
+    "topic": "reliability",
+    "subtopic": "monitoring",
+    "difficulty": "medium",
+    "question": "Design a monitoring and alerting system for a distributed application. What would you monitor and how?",
+    "follow_ups": [
+      "How do you avoid alert fatigue?",
+      "What's your approach to distributed tracing?",
+      "How do you handle log aggregation at scale?"
+    ],
+    "rubric": {
+      "requirements": "Metrics, logs, traces",
+      "components": "Time-series DB, alerting rules, dashboards",
+      "tradeoffs": "Granularity vs cost",
+      "production": "SLOs, runbooks"
+    }
+  }
+]

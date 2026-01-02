@@ -1,0 +1,192 @@
+[
+  {
+    "id": "coding_001",
+    "domain": "coding",
+    "topic": "arrays_strings",
+    "subtopic": "two_pointers",
+    "difficulty": "easy",
+    "question": "Given a sorted array of integers and a target sum, find two numbers that add up to the target. Walk me through your approach.",
+    "follow_ups": [
+      "What's the time and space complexity?",
+      "How would your approach change if the array wasn't sorted?",
+      "What if there are duplicate numbers?"
+    ],
+    "rubric": {
+      "correctness": "Identifies two-pointer approach from opposite ends",
+      "optimization": "Achieves O(n) time, O(1) space",
+      "edge_cases": "Handles no solution, duplicates, negative numbers",
+      "communication": "Explains logic clearly before diving into details"
+    }
+  },
+  {
+    "id": "coding_002",
+    "domain": "coding",
+    "topic": "arrays_strings",
+    "subtopic": "sliding_window",
+    "difficulty": "medium",
+    "question": "Find the longest substring without repeating characters. Explain your thought process.",
+    "follow_ups": [
+      "What data structure are you using to track characters?",
+      "How do you handle the window shrinking?",
+      "What's your approach when you encounter a repeat?"
+    ],
+    "rubric": {
+      "correctness": "Uses sliding window with hashmap/set",
+      "optimization": "Achieves O(n) time",
+      "edge_cases": "Empty string, all same characters, all unique",
+      "communication": "Explains window expansion and contraction"
+    }
+  },
+  {
+    "id": "coding_003",
+    "domain": "coding",
+    "topic": "dynamic_programming",
+    "subtopic": "1d_dp",
+    "difficulty": "easy",
+    "question": "You're climbing a staircase with n steps. You can climb 1 or 2 steps at a time. How many distinct ways can you reach the top? Walk me through your solution.",
+    "follow_ups": [
+      "Can you identify the recurrence relation?",
+      "How would you optimize space?",
+      "What if you could take 1, 2, or 3 steps?"
+    ],
+    "rubric": {
+      "correctness": "Identifies Fibonacci-like pattern",
+      "optimization": "O(n) time, can optimize to O(1) space",
+      "edge_cases": "n=0, n=1, n=2",
+      "communication": "Explains overlapping subproblems"
+    }
+  },
+  {
+    "id": "coding_004",
+    "domain": "coding",
+    "topic": "dynamic_programming",
+    "subtopic": "2d_dp",
+    "difficulty": "hard",
+    "question": "Given two strings, find the length of their longest common subsequence. Explain the dynamic programming approach.",
+    "follow_ups": [
+      "Walk me through the state transition",
+      "How would you reconstruct the actual subsequence?",
+      "Can you optimize the space complexity?"
+    ],
+    "rubric": {
+      "correctness": "Defines dp[i][j] as LCS of first i and j characters",
+      "optimization": "O(mn) time and space, can reduce to O(min(m,n)) space",
+      "edge_cases": "Empty strings, no common characters",
+      "communication": "Clearly explains base cases and transitions"
+    }
+  },
+  {
+    "id": "coding_005",
+    "domain": "coding",
+    "topic": "trees_graphs",
+    "subtopic": "tree_traversals",
+    "difficulty": "easy",
+    "question": "Explain the difference between BFS and DFS for tree traversal. When would you use each?",
+    "follow_ups": [
+      "How would you implement level-order traversal?",
+      "What's the space complexity of each approach?",
+      "Can you convert recursive DFS to iterative?"
+    ],
+    "rubric": {
+      "correctness": "Understands queue vs stack/recursion difference",
+      "optimization": "Knows space implications of each",
+      "edge_cases": "Single node, unbalanced tree",
+      "communication": "Gives concrete use cases for each"
+    }
+  },
+  {
+    "id": "coding_006",
+    "domain": "coding",
+    "topic": "trees_graphs",
+    "subtopic": "graph_search",
+    "difficulty": "medium",
+    "question": "How would you detect a cycle in a directed graph? Walk me through your approach.",
+    "follow_ups": [
+      "What's the difference between detecting cycles in directed vs undirected graphs?",
+      "How do you handle disconnected components?",
+      "Can you explain the three-color approach?"
+    ],
+    "rubric": {
+      "correctness": "Uses DFS with visited states or three colors",
+      "optimization": "O(V+E) time complexity",
+      "edge_cases": "Self-loops, disconnected graph, single node",
+      "communication": "Explains recursion stack tracking"
+    }
+  },
+  {
+    "id": "coding_007",
+    "domain": "coding",
+    "topic": "sorting_searching",
+    "subtopic": "binary_search",
+    "difficulty": "medium",
+    "question": "Search for a target value in a rotated sorted array. Explain your approach.",
+    "follow_ups": [
+      "How do you determine which half is sorted?",
+      "What are the edge cases?",
+      "What if there are duplicates?"
+    ],
+    "rubric": {
+      "correctness": "Uses modified binary search with rotation handling",
+      "optimization": "Achieves O(log n) time",
+      "edge_cases": "Not rotated, single element, target at pivot",
+      "communication": "Explains decision logic at each step"
+    }
+  },
+  {
+    "id": "coding_008",
+    "domain": "coding",
+    "topic": "recursion_backtracking",
+    "subtopic": "backtracking",
+    "difficulty": "medium",
+    "question": "Generate all valid combinations of n pairs of parentheses. Walk me through the backtracking approach.",
+    "follow_ups": [
+      "How do you determine when a state is valid?",
+      "What's the time complexity?",
+      "How would you generate only balanced parentheses?"
+    ],
+    "rubric": {
+      "correctness": "Tracks open and close counts correctly",
+      "optimization": "Prunes invalid branches early",
+      "edge_cases": "n=0, n=1",
+      "communication": "Explains backtracking decision tree"
+    }
+  },
+  {
+    "id": "coding_009",
+    "domain": "coding",
+    "topic": "system_coding",
+    "subtopic": "api_design",
+    "difficulty": "medium",
+    "question": "Design a rate limiter API. What would be your interface and how would you implement the core logic?",
+    "follow_ups": [
+      "How do you handle distributed rate limiting?",
+      "Token bucket vs sliding window - what are the tradeoffs?",
+      "How do you handle time zones and clock skew?"
+    ],
+    "rubric": {
+      "correctness": "Designs clean API with configuration options",
+      "optimization": "Considers memory efficiency",
+      "edge_cases": "Burst traffic, reset timing",
+      "communication": "Explains algorithm choices"
+    }
+  },
+  {
+    "id": "coding_010",
+    "domain": "coding",
+    "topic": "system_coding",
+    "subtopic": "testing",
+    "difficulty": "easy",
+    "question": "How would you approach testing a function that calculates the nth Fibonacci number? Walk me through your test cases.",
+    "follow_ups": [
+      "What's the difference between unit and integration tests here?",
+      "How would you test for performance?",
+      "How do you handle very large inputs?"
+    ],
+    "rubric": {
+      "correctness": "Identifies boundary cases (0, 1, 2)",
+      "optimization": "Tests for overflow/large n",
+      "edge_cases": "Negative input, typical cases",
+      "communication": "Structures tests by category"
+    }
+  }
+]

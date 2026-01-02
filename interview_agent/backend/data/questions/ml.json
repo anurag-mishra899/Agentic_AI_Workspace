@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ml_001",
+    "domain": "ml",
+    "topic": "fundamentals",
+    "subtopic": "supervised_learning",
+    "difficulty": "easy",
+    "question": "Explain the difference between classification and regression. Give examples of when you'd use each.",
+    "follow_ups": [
+      "Can you turn a regression problem into classification?",
+      "What if you have ordinal outputs?",
+      "How do evaluation metrics differ?"
+    ],
+    "rubric": {
+      "correctness": "Discrete vs continuous outputs",
+      "examples": "Relevant real-world examples",
+      "depth": "Discusses edge cases",
+      "communication": "Clear and structured"
+    }
+  },
+  {
+    "id": "ml_002",
+    "domain": "ml",
+    "topic": "fundamentals",
+    "subtopic": "evaluation_metrics",
+    "difficulty": "medium",
+    "question": "You're building a fraud detection model. Which metrics would you use and why?",
+    "follow_ups": [
+      "Why not just use accuracy?",
+      "How do you choose a threshold?",
+      "What about the business cost of false positives vs false negatives?"
+    ],
+    "rubric": {
+      "correctness": "Identifies class imbalance concern",
+      "examples": "Precision, recall, F1, AUC-PR",
+      "depth": "Considers business impact",
+      "communication": "Explains tradeoffs"
+    }
+  },
+  {
+    "id": "ml_003",
+    "domain": "ml",
+    "topic": "classical_ml",
+    "subtopic": "linear_models",
+    "difficulty": "medium",
+    "question": "Explain the intuition behind regularization in linear regression. Why do L1 and L2 behave differently?",
+    "follow_ups": [
+      "When would you use L1 vs L2?",
+      "What happens with highly correlated features?",
+      "How do you choose the regularization parameter?"
+    ],
+    "rubric": {
+      "correctness": "Penalty terms and their effects",
+      "examples": "Sparsity vs shrinkage",
+      "depth": "Geometric interpretation",
+      "communication": "Intuitive explanation"
+    }
+  },
+  {
+    "id": "ml_004",
+    "domain": "ml",
+    "topic": "classical_ml",
+    "subtopic": "tree_models",
+    "difficulty": "medium",
+    "question": "Compare Random Forest and Gradient Boosting. When would you choose one over the other?",
+    "follow_ups": [
+      "How does each handle overfitting?",
+      "Which is faster to train?",
+      "How do they handle missing values?"
+    ],
+    "rubric": {
+      "correctness": "Parallel vs sequential ensemble",
+      "examples": "Variance reduction vs bias reduction",
+      "depth": "Hyperparameter considerations",
+      "communication": "Practical guidance"
+    }
+  },
+  {
+    "id": "ml_005",
+    "domain": "ml",
+    "topic": "deep_learning",
+    "subtopic": "neural_networks",
+    "difficulty": "medium",
+    "question": "Explain backpropagation in neural networks. Why is it important?",
+    "follow_ups": [
+      "What's the vanishing gradient problem?",
+      "How do different activation functions affect it?",
+      "What's the chain rule's role?"
+    ],
+    "rubric": {
+      "correctness": "Gradient computation through layers",
+      "examples": "Chain rule application",
+      "depth": "Computational graph perspective",
+      "communication": "Step-by-step clarity"
+    }
+  },
+  {
+    "id": "ml_006",
+    "domain": "ml",
+    "topic": "deep_learning",
+    "subtopic": "optimization",
+    "difficulty": "hard",
+    "question": "Compare SGD, Adam, and learning rate scheduling. How do you choose an optimization strategy?",
+    "follow_ups": [
+      "What are the hyperparameters in Adam?",
+      "When might SGD outperform Adam?",
+      "How does batch size affect optimization?"
+    ],
+    "rubric": {
+      "correctness": "Momentum, adaptive learning rates",
+      "examples": "When each works best",
+      "depth": "Convergence considerations",
+      "communication": "Practical recommendations"
+    }
+  },
+  {
+    "id": "ml_007",
+    "domain": "ml",
+    "topic": "nlp",
+    "subtopic": "transformers",
+    "difficulty": "hard",
+    "question": "Explain the attention mechanism in transformers. Why was it a breakthrough?",
+    "follow_ups": [
+      "What's the difference between self-attention and cross-attention?",
+      "Why multi-head attention?",
+      "What about positional encoding?"
+    ],
+    "rubric": {
+      "correctness": "Query, key, value matrices",
+      "examples": "Parallelization advantage over RNNs",
+      "depth": "Scaled dot-product attention",
+      "communication": "Intuitive explanation"
+    }
+  },
+  {
+    "id": "ml_008",
+    "domain": "ml",
+    "topic": "nlp",
+    "subtopic": "llms",
+    "difficulty": "medium",
+    "question": "Explain Retrieval Augmented Generation (RAG). When would you use it instead of fine-tuning?",
+    "follow_ups": [
+      "How do you choose what to retrieve?",
+      "What are the challenges with context length?",
+      "How do you evaluate RAG systems?"
+    ],
+    "rubric": {
+      "correctness": "Retrieval + generation pipeline",
+      "examples": "Use cases vs fine-tuning",
+      "depth": "Embedding similarity, chunking",
+      "communication": "Practical tradeoffs"
+    }
+  },
+  {
+    "id": "ml_009",
+    "domain": "ml",
+    "topic": "mlops",
+    "subtopic": "monitoring",
+    "difficulty": "medium",
+    "question": "Your production model's performance is degrading. How do you diagnose and address data drift?",
+    "follow_ups": [
+      "How do you detect drift automatically?",
+      "What's the difference between data drift and concept drift?",
+      "When should you retrain vs rebuild?"
+    ],
+    "rubric": {
+      "correctness": "Distribution shift types",
+      "examples": "Statistical tests, monitoring",
+      "depth": "Retraining strategies",
+      "communication": "Systematic approach"
+    }
+  },
+  {
+    "id": "ml_010",
+    "domain": "ml",
+    "topic": "mlops",
+    "subtopic": "model_serving",
+    "difficulty": "medium",
+    "question": "Design a system for serving ML predictions at scale. What are your key considerations?",
+    "follow_ups": [
+      "Batch vs real-time inference - tradeoffs?",
+      "How do you handle model updates?",
+      "What about A/B testing models?"
+    ],
+    "rubric": {
+      "correctness": "Latency, throughput, availability",
+      "examples": "Model optimization techniques",
+      "depth": "Canary deployments",
+      "communication": "Architecture clarity"
+    }
+  },
+  {
+    "id": "ml_011",
+    "domain": "ml",
+    "topic": "computer_vision",
+    "subtopic": "cnns",
+    "difficulty": "medium",
+    "question": "Explain how convolutional layers work in CNNs. Why are they effective for images?",
+    "follow_ups": [
+      "What's the role of pooling?",
+      "How do you calculate output dimensions?",
+      "What about modern architectures like ResNet?"
+    ],
+    "rubric": {
+      "correctness": "Convolution operation, filters",
+      "examples": "Translation invariance, parameter sharing",
+      "depth": "Receptive field concept",
+      "communication": "Visual intuition"
+    }
+  },
+  {
+    "id": "ml_012",
+    "domain": "ml",
+    "topic": "fundamentals",
+    "subtopic": "cross_validation",
+    "difficulty": "easy",
+    "question": "When would you use cross-validation vs a simple train-test split?",
+    "follow_ups": [
+      "What about time series data?",
+      "How many folds should you use?",
+      "What's stratified k-fold?"
+    ],
+    "rubric": {
+      "correctness": "Data efficiency, variance of estimate",
+      "examples": "Small dataset scenarios",
+      "depth": "Leakage concerns",
+      "communication": "Practical guidelines"
+    }
+  }
+]
