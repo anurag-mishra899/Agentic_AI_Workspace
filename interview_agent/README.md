@@ -15,6 +15,10 @@ A real-time voice-based AI interview preparation system that provides adaptive, 
 
 ## Architecture
 
+![High-Level Architecture](high-level-architecture.png)
+
+### Project Structure
+
 ```
 interview_agent/
 ├── backend/           # Python FastAPI backend
